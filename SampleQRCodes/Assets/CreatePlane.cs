@@ -10,20 +10,17 @@ public class CreatePlane : MonoBehaviour
 
     public GameObject prefab;
 
-    private void Awake()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         var collection = GameObject.FindGameObjectWithTag("QRCode");
 
-        if (!qrList.Contains(collection))
+        if (!qrList.Contains(collection) && collection != null)
         {
             Debug.Log("Detectado QR");
             qrList.Add(collection);
+            Instantiate(prefab, collection.transform);
         }
     }
 }
