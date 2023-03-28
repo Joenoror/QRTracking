@@ -831,12 +831,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: config
   configInfo:
-    nameVar1: 
-    holdingVar1: 0
-    nameVar2: 
-    holdingVar2: 0
-    nameVar3: 
-    holdingVar3: 0
+    modbusList:
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
+    - nameVar: 
+      holdingVar: 0
   path: 
 --- !u!1 &1453204027080936720
 GameObject:
