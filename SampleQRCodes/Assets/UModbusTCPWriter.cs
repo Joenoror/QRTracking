@@ -33,7 +33,7 @@ public class UModbusTCPWriter : MonoBehaviour
     }
 
 
-    public void WriteMultipleHolding(string address, int val1, int val2, int val3, int val4, int val5, int val6, int val7, int val8, int val9, int val10, int val11, int val12, int val13)
+    public void WriteMultipleHolding(string address, int val1, int val2, int val3, int val4, int val5, int val6, int val7, int val8, int val9, int val10, int val11, int val12, int val13, int val14, int val15, int val16, int val17, int val18)
     {
 
         //Connection values
@@ -55,10 +55,14 @@ public class UModbusTCPWriter : MonoBehaviour
         byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(val11);
         byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(val12);
         byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(val13);
-        
+        byte[] bValue14 = UModbusTCPHelpers.GetBytesOfInt(val14);
+        byte[] bValue15 = UModbusTCPHelpers.GetBytesOfInt(val15);
+        byte[] bValue16 = UModbusTCPHelpers.GetBytesOfInt(val16);
+        byte[] bValue17 = UModbusTCPHelpers.GetBytesOfInt(val17);
+        byte[] bValue18 = UModbusTCPHelpers.GetBytesOfInt(val18);
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
-        byte[] bValue_Input = new byte[26];
+        byte[] bValue_Input = new byte[36];
         bValue1.CopyTo(bValue_Input, 0);
         bValue2.CopyTo(bValue_Input, 2);
         bValue3.CopyTo(bValue_Input, 4);
@@ -72,7 +76,11 @@ public class UModbusTCPWriter : MonoBehaviour
         bValue11.CopyTo(bValue_Input, 20);
         bValue12.CopyTo(bValue_Input, 22);
         bValue13.CopyTo(bValue_Input, 24);
-        
+        bValue14.CopyTo(bValue_Input, 26);
+        bValue15.CopyTo(bValue_Input, 28);
+        bValue16.CopyTo(bValue_Input, 30);
+        bValue17.CopyTo(bValue_Input, 32);
+        bValue18.CopyTo(bValue_Input, 34);
 
         if (!m_oUModbusTCP.connected) //Si no esta conectado, conecta a esa IP y puerto
         {
