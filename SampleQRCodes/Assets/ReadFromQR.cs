@@ -5,16 +5,16 @@ using UnityEngine;
 using System.IO;
 
 [Serializable]
-public class modbusVariable{
+public class ModbusVariable{
     public string nameVar;
-    public int holdingVar;
+    public int valueVar;
 }
 
 
 [Serializable]
 public class ConfigInfo
 {
-    public List<modbusVariable> modbusList;
+    public List<ModbusVariable> modbusList;
     //public string nameVar1;
     //public int holdingVar1;
     //public string nameVar2;

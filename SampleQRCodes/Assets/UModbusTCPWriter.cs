@@ -18,51 +18,72 @@ public class UModbusTCPWriter : MonoBehaviour
         m_oUModbusTCP = null;
         m_oUModbusTCPException = null;
         m_oUModbusTCP = UModbusTCP.Instance;
+
     }
 
-    UModbusTCPWriter UmodbusInstance;
+    UModbusTCPWriter umodbusInstance;
     // Start is called before the first frame update
     private void Start()
     {
-        UmodbusInstance = gameObject.AddComponent<UModbusTCPWriter>();
+        //UmodbusInstance = gameObject.AddComponent<UModbusTCPWriter>();
+        umodbusInstance = GetComponent<UModbusTCPWriter>();
+
     }
 
     private void Update()
     {
-        //TODO -----> UmodbusInstance.WriteMultipleHolding("1", VARIABLES);
+        umodbusInstance.WriteMultipleHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
     }
 
 
-    public void WriteMultipleHolding(string address, int val1, int val2, int val3, int val4, int val5, int val6, int val7, int val8, int val9, int val10, int val11, int val12, int val13, int val14, int val15, int val16, int val17, int val18)
-    {
+    public List<byte[]> bValues;
 
+    public void WriteMultipleHolding(string address, ConfigInfo configInfo)
+    {
         //Connection values
         //sIP_Input = "127.0.0.1"; //Variable con la ip introducida
         ushort usPort_Input = Convert.ToUInt16("502"); //Variable con el puerto introducido
         ushort usAddress_Input = Convert.ToUInt16(Int32.Parse(address) - 1); //Variable con el slot a escribir introducido
+        if (!m_oUModbusTCP.connected) //Si no esta conectado, conecta a esa IP y puerto
+        {
+            m_oUModbusTCP.Connect(sIP_Input, usPort_Input);
+        }
 
+        //foreach (var modbusvar in configInfo.modbusList){
+
+        //    var it = 0;
+        //    Debug.Log("valor del entero -->" + modbusvar.valueVar);
+        //    Debug.Log("bValues antes de convertir -->" + UModbusTCPHelpers.GetBytesOfInt(modbusvar.valueVar));
+        //    bValues[it] = UModbusTCPHelpers.GetBytesOfInt(modbusvar.valueVar);
+        //    Debug.Log("bValues convertido -->" + bValues[it]);
+        //    it++;
+        //}
         //Input values from string to byte[]
-        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(val1);
-        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(val2);
-        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(val3);
-        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(val4);
-        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(val5);
-        byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(val6);
-        byte[] bValue7 = UModbusTCPHelpers.GetBytesOfInt(val7);
-        byte[] bValue8 = UModbusTCPHelpers.GetBytesOfInt(val8);
-        byte[] bValue9 = UModbusTCPHelpers.GetBytesOfInt(val9);
-        byte[] bValue10 = UModbusTCPHelpers.GetBytesOfInt(val10);
-        byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(val11);
-        byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(val12);
-        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(val13);
-        byte[] bValue14 = UModbusTCPHelpers.GetBytesOfInt(val14);
-        byte[] bValue15 = UModbusTCPHelpers.GetBytesOfInt(val15);
-        byte[] bValue16 = UModbusTCPHelpers.GetBytesOfInt(val16);
-        byte[] bValue17 = UModbusTCPHelpers.GetBytesOfInt(val17);
-        byte[] bValue18 = UModbusTCPHelpers.GetBytesOfInt(val18);
+        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].valueVar);
+        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].valueVar);
+        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].valueVar);
+        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[3].valueVar);
+        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[4].valueVar);
+        byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[5].valueVar);
+        byte[] bValue7 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[6].valueVar);
+        byte[] bValue8 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[7].valueVar);
+        byte[] bValue9 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[8].valueVar);
+        byte[] bValue10 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[9].valueVar);
+        byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[10].valueVar);
+        byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[11].valueVar);
+        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[12].valueVar);
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
-        byte[] bValue_Input = new byte[36];
+        byte[] bValue_Input = new byte[26];
+
+        //foreach (var modbusvar in configInfo.modbusList)
+        //{
+        //    var it = 0; var it2 = 0;
+        //    bValues[it].CopyTo(bValue_Input, it2);
+        //    it++;
+        //    it2 += 2;
+        //}
+
         bValue1.CopyTo(bValue_Input, 0);
         bValue2.CopyTo(bValue_Input, 2);
         bValue3.CopyTo(bValue_Input, 4);
@@ -76,16 +97,8 @@ public class UModbusTCPWriter : MonoBehaviour
         bValue11.CopyTo(bValue_Input, 20);
         bValue12.CopyTo(bValue_Input, 22);
         bValue13.CopyTo(bValue_Input, 24);
-        bValue14.CopyTo(bValue_Input, 26);
-        bValue15.CopyTo(bValue_Input, 28);
-        bValue16.CopyTo(bValue_Input, 30);
-        bValue17.CopyTo(bValue_Input, 32);
-        bValue18.CopyTo(bValue_Input, 34);
 
-        if (!m_oUModbusTCP.connected) //Si no esta conectado, conecta a esa IP y puerto
-        {
-            m_oUModbusTCP.Connect(sIP_Input, usPort_Input);
-        }
+
 
         //Exception callback
         if (m_oUModbusTCPException != null) //Control de errores

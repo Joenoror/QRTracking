@@ -123,6 +123,165 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &469021617
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 110067353672498207, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453153784257171974, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_Name
+      value: QRCodeUpdated
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: path
+      value: '{"modbusList":[{"nameVar":"RESET","holdingVar":0},{"nameVar":"MARCHA_1","holdingVar":0},{"nameVar":"MARCHA_2","holdingVar":0},{"nameVar":"CONSIGNA_ENTERA","holdingVar":0},{"nameVar":"CONSIGNA_DECIMAL","holdingVar":0},{"nameVar":"FRECUENCIA_PENTERA","holdingVar":0},{"nameVar":"FRECUENCIA_PDECIMAL","holdingVar":0},{"nameVar":"VELOCIDAD_PENTERA","holdingVar":0},{"nameVar":"VELOCIDAD_PDECIMAL","holdingVar":0},{"nameVar":"INTENSIDAD_PENTERA","holdingVar":0},{"nameVar":"INTENSIDAD_PDECIMAL","holdingVar":0},{"nameVar":"TEMPERATURA_PENTERA","holdingVar":0},{"nameVar":"TEMPERATURA_PDECIMAL","holdingVar":0}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[0].nameVar
+      value: RESET
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[1].nameVar
+      value: MARCHA_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[2].nameVar
+      value: MARCHA_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[3].nameVar
+      value: CONSIGNA_ENTERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[4].nameVar
+      value: CONSIGNA_DECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[5].nameVar
+      value: FRECUENCIA_PENTERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[6].nameVar
+      value: FRECUENCIA_PDECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[7].nameVar
+      value: VELOCIDAD_PENTERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[8].nameVar
+      value: VELOCIDAD_PDECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[9].nameVar
+      value: INTENSIDAD_PENTERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[0].valueVar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[10].nameVar
+      value: INTENSIDAD_PDECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[11].nameVar
+      value: TEMPERATURA_PENTERA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[12].nameVar
+      value: TEMPERATURA_PDECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532306239547612158, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: m_Text
+      value: '{"modbusList":[{"nameVar":"RESET","holdingVar":0},{"nameVar":"MARCHA_1","holdingVar":0},{"nameVar":"MARCHA_2","holdingVar":0},{"nameVar":"CONSIGNA_ENTERA","holdingVar":0},{"nameVar":"CONSIGNA_DECIMAL","holdingVar":0},{"nameVar":"FRECUENCIA_PENTERA","holdingVar":0},{"nameVar":"FRECUENCIA_PDECIMAL","holdingVar":0},{"nameVar":"VELOCIDAD_PENTERA","holdingVar":0},{"nameVar":"VELOCIDAD_PDECIMAL","holdingVar":0},{"nameVar":"INTENSIDAD_PENTERA","holdingVar":0},{"nameVar":"INTENSIDAD_PDECIMAL","holdingVar":0},{"nameVar":"TEMPERATURA_PENTERA","holdingVar":0},{"nameVar":"TEMPERATURA_PDECIMAL","holdingVar":0}]}'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40ee15513a5e74541b0521ddb3752b07, type: 3}
 --- !u!1001 &656288161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,6 +659,50 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &1163665698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163665700}
+  - component: {fileID: 1163665699}
+  m_Layer: 0
+  m_Name: ModbusConnection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1163665699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163665698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0d12ffc2720af4ab044f023c39c21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sIP_Input: 127.0.0.1
+--- !u!4 &1163665700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163665698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1280, y: 720, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214886540
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,4 +883,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qrList: []
-  prefab: {fileID: 0}
+  prefab: {fileID: 3380335567030811386, guid: 28b3a0b0ad763854d837611b98829a59, type: 3}
