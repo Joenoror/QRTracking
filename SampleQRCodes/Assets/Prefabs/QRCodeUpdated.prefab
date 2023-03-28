@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5437579934272537021
 Transform:
   m_ObjectHideFlags: 0
@@ -832,11 +832,12 @@ MonoBehaviour:
   fileName: config
   configInfo:
     nameVar1: 
-    initialValueVar1: 0
+    holdingVar1: 0
     nameVar2: 
-    initialValueVa21: 0
+    holdingVar2: 0
     nameVar3: 
-    initialValueVar3: 0
+    holdingVar3: 0
+  path: 
 --- !u!1 &1453204027080936720
 GameObject:
   m_ObjectHideFlags: 0
