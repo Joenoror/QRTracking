@@ -30,10 +30,17 @@ namespace QRTracking
             }
         }
 
+        //private void Awake()
+        //{
+        //    //qrCodesObjectsList.Clear();
+        //}
+
         // Use this for initialization
         void Start()
         {
             Debug.Log("QRCodesVisualizer start");
+            
+            //qrCodesObjectsList.Clear();
             qrCodesObjectsList = new SortedDictionary<System.Guid, GameObject>();
 
             QRCodesManager.Instance.QRCodesTrackingStateChanged += Instance_QRCodesTrackingStateChanged;
@@ -135,6 +142,23 @@ namespace QRTracking
         void Update()
         {
             HandleEvents();
+            
+        }
+
+        void OnApplicationQuit()
+        {
+            Debug.Log("Application ending after " + Time.time + " seconds");
+
+            //Clears all of the caches
+            Caching.AddCache("qrCodesObjectsList");
+
+            bool success = Caching.ClearCache();
+
+            if (!success)
+            {
+                Debug.Log("Unable to clear cache");
+            }
+
         }
     }
 

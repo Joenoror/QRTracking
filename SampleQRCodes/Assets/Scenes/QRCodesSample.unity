@@ -190,6 +190,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: QRCodesManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4908586973252628864, guid: 9ceaea61be84db74ca74378863e9c03e,
+        type: 3}
+      propertyPath: AutoStartQRTracking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731539863259288648, guid: 9ceaea61be84db74ca74378863e9c03e,
+        type: 3}
+      propertyPath: qrCodePrefab
+      value: 
+      objectReference: {fileID: 1453153784257171974, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ceaea61be84db74ca74378863e9c03e, type: 3}
 --- !u!1 &705507993
@@ -635,7 +646,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1859008643}
   - component: {fileID: 1859008644}
-  - component: {fileID: 1859008645}
   m_Layer: 0
   m_Name: DetectQR
   m_TagString: Untagged
@@ -650,7 +660,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859008642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.74674916, y: -0.7277602, z: 0.49652624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -671,15 +681,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qrList: []
   prefab: {fileID: 5811918617708917682, guid: f824e60f59912704e9fef7d7dcbadbfe, type: 3}
---- !u!114 &1859008645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859008642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c4accaa1c7fc34b9bbe4292404c671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
