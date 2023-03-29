@@ -74,39 +74,12 @@ public class UModbusTCPReader : MonoBehaviour
 
         //Read Inputs
         m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("1") - 1), 1);
-        //Debug.Log("m_iresponsevalue: "+ m_iResponseValue);
         configInfo.modbusList[0].valueVar = m_iResponseValue;
         Debug.Log("modbusList[0]: " + configInfo.modbusList[0].valueVar);
 
-        /*int[] iValue1 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("1") - 1), 1));
-        int[] iValue2 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("2") - 1), 1));
-        int[] iValue3 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("3") - 1), 1));
-        int[] iValue4 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("4") - 1), 1));
-        int[] iValue5 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("5") - 1), 1));
-        int[] iValue6 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("6") - 1), 1));
-        int[] iValue7 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("7") - 1), 1));
-        int[] iValue8 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("8") - 1), 1));
-        int[] iValue9 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("9") - 1), 1));
-        int[] iValue10 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("10") - 1), 1));
-        int[] iValue11 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("11") - 1), 1));
-        int[] iValue12 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("12") - 1), 1));
-        int[] iValue13 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("13") - 1), 1));*/
-
-        /*configInfo.modbusList[0].valueVar = iValue1[0];
-        Debug.Log("ivalue1: " + iValue1[0]);
-        configInfo.modbusList[1].valueVar = iValue2[0];
-        Debug.Log("ivalue2: " + iValue2[0]);
-        configInfo.modbusList[2].valueVar = iValue3[0];
-        configInfo.modbusList[3].valueVar = iValue4[0];
-        configInfo.modbusList[4].valueVar = iValue5[0];
-        configInfo.modbusList[5].valueVar = iValue6[0];
-        configInfo.modbusList[6].valueVar = iValue7[0];
-        configInfo.modbusList[7].valueVar = iValue8[0];
-        configInfo.modbusList[8].valueVar = iValue9[0];
-        configInfo.modbusList[9].valueVar = iValue10[0];
-        configInfo.modbusList[10].valueVar = iValue11[0];
-        configInfo.modbusList[11].valueVar = iValue12[0];
-        configInfo.modbusList[12].valueVar = iValue13[0];*/
+        m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("2") - 1), 1);
+        configInfo.modbusList[0].valueVar = m_iResponseValue;
+        Debug.Log("modbusList[1]: " + configInfo.modbusList[1].valueVar);
 
     }
 
