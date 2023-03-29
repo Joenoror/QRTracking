@@ -54,7 +54,7 @@ public class UModbusTCPReader : MonoBehaviour
         m_oUModbusTCPException = new UModbusTCP.ExceptionData(UModbusTCPOnException);
         m_oUModbusTCP.OnException += m_oUModbusTCPException;
 
-        int[] iValue1 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 1, 1));
+        int[] iValue1 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("1") - 1), 1));
         int[] iValue2 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 2, 1));
         int[] iValue3 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 3, 1));
         int[] iValue4 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 4, 1));
@@ -67,6 +67,10 @@ public class UModbusTCPReader : MonoBehaviour
         int[] iValue11 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 11, 1));
         int[] iValue12 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 12, 1));
         int[] iValue13 = UModbusTCPHelpers.GetIntsOfBytes(m_oUModbusTCP.ReadHoldingRegister(2, 1, 13, 1));
+
+        Debug.Log("iValue pos 0" + iValue1[0]);
+        Debug.Log("iValue pos 1" + iValue1[1]);
+
 
         configInfo.modbusList[0].valueVar = iValue1[0];
         configInfo.modbusList[1].valueVar = iValue2[0];
