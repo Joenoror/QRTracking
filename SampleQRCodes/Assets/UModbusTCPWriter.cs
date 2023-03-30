@@ -64,17 +64,17 @@ public class UModbusTCPWriter : MonoBehaviour
         byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].holdingVar);
         byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[3].holdingVar);
         byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[4].holdingVar);
-        byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[5].holdingVar);
+       /* byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[5].holdingVar);
         byte[] bValue7 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[6].holdingVar);
         byte[] bValue8 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[7].holdingVar);
         byte[] bValue9 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[8].holdingVar);
         byte[] bValue10 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[9].holdingVar);
         byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[10].holdingVar);
         byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[11].holdingVar);
-        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[12].holdingVar);
+        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[12].holdingVar);*/
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
-        byte[] bValue_Input = new byte[26];
+        byte[] bValue_Input = new byte[10];
 
         //foreach (var modbusvar in configInfo.modbusList)
         //{
@@ -89,14 +89,14 @@ public class UModbusTCPWriter : MonoBehaviour
         bValue3.CopyTo(bValue_Input, 4);
         bValue4.CopyTo(bValue_Input, 6);
         bValue5.CopyTo(bValue_Input, 8);
-        bValue6.CopyTo(bValue_Input, 10);
+        /*bValue6.CopyTo(bValue_Input, 10);
         bValue7.CopyTo(bValue_Input, 12);
         bValue8.CopyTo(bValue_Input, 14);
         bValue9.CopyTo(bValue_Input, 16);
         bValue10.CopyTo(bValue_Input, 18);
         bValue11.CopyTo(bValue_Input, 20);
         bValue12.CopyTo(bValue_Input, 22);
-        bValue13.CopyTo(bValue_Input, 24);
+        bValue13.CopyTo(bValue_Input, 24);*/
 
 
 

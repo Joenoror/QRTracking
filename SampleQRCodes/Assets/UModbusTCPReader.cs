@@ -76,7 +76,11 @@ public class UModbusTCPReader : MonoBehaviour
         
         for(int i = 0; i < 13; i++)
         {
-            configInfo.modbusList[i].holdingVar = m_iResponseValues[i];
+            if (i != 3 && i != 4)
+            {
+                configInfo.modbusList[i].holdingVar = m_iResponseValues[i];
+            }
+            
         }
        
 
