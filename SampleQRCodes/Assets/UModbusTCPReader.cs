@@ -14,14 +14,14 @@ public class UModbusTCPReader : MonoBehaviour
     UModbusTCP.ResponseData m_oUModbusTCPResponse;
     UModbusTCP.ExceptionData m_oUModbusTCPException;
 
-    int m_iResponseValue;
+    int[] m_iResponseValues = new int[13];
 
     void Awake() //Awake llama una sola vez al inicio de las escena, se está utilizando para poner valores por defecto
     {
         m_oUModbusTCP = null;
         m_oUModbusTCPResponse = null;
         m_oUModbusTCPException = null;
-        m_iResponseValue = -1;
+
 
         m_oUModbusTCP = UModbusTCP.Instance;
     }
@@ -30,22 +30,18 @@ public class UModbusTCPReader : MonoBehaviour
 
     private void Start()
     {
+        
         umodbusInstance = GetComponent<UModbusTCPReader>();
-
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        //umodbusInstance.
         umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
     }
 
     public void ReadMultipleHolding(ConfigInfo configInfo)
     {
-        //Reset response
-        
-        m_iResponseValue = -1;
        
 
         //Connection values
@@ -73,13 +69,14 @@ public class UModbusTCPReader : MonoBehaviour
 
 
         //Read Inputs
-        m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("1") - 1), 1);
-        configInfo.modbusList[0].valueVar = m_iResponseValue;
-        Debug.Log("modbusList[0]: " + configInfo.modbusList[0].valueVar);
 
-        m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("2") - 1), 1);
-        configInfo.modbusList[0].valueVar = m_iResponseValue;
-        Debug.Log("modbusList[1]: " + configInfo.modbusList[1].valueVar);
+        m_oUModbusTCP.ReadHoldingRegister(2, 1, Convert.ToUInt16(Int32.Parse("1") - 1), 13);
+        
+        for(int i = 0; i < 13; i++)
+        {
+            configInfo.modbusList[i].valueVar = m_iResponseValues[i];
+        }
+       
 
     }
 
@@ -109,7 +106,11 @@ public class UModbusTCPReader : MonoBehaviour
         }
 
         int[] iValues = UModbusTCPHelpers.GetIntsOfBytes(oResponseFinalValues);
-        m_iResponseValue = iValues[0];
+        for(int i = 0; i<13; i++)
+        {
+            m_iResponseValues[i] = iValues[i];
+        }
+       
     }
 
     void UModbusTCPOnException(ushort _oID, byte _oUnit, byte _oFunction, byte _oException)
