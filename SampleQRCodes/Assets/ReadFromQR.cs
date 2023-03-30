@@ -7,7 +7,7 @@ using System.IO;
 [Serializable]
 public class ModbusVariable{
     public string nameVar;
-    public int valueVar;
+    public int holdingVar;
 }
 
 
@@ -96,6 +96,7 @@ public class ReadFromQR : MonoBehaviour
         {
             path = gameObject.GetComponent<TextMesh>().text;
             configInfo = JsonUtility.FromJson<ConfigInfo>(path);
+            FindObjectOfType<UIManager>().configInfo = configInfo;
         }
 
 

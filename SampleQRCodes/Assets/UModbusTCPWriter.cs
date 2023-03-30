@@ -52,26 +52,26 @@ public class UModbusTCPWriter : MonoBehaviour
         //foreach (var modbusvar in configInfo.modbusList){
 
         //    var it = 0;
-        //    Debug.Log("valor del entero -->" + modbusvar.valueVar);
-        //    Debug.Log("bValues antes de convertir -->" + UModbusTCPHelpers.GetBytesOfInt(modbusvar.valueVar));
-        //    bValues[it] = UModbusTCPHelpers.GetBytesOfInt(modbusvar.valueVar);
+        //    Debug.Log("valor del entero -->" + modbusvar.holdingVar);
+        //    Debug.Log("bValues antes de convertir -->" + UModbusTCPHelpers.GetBytesOfInt(modbusvar.holdingVar));
+        //    bValues[it] = UModbusTCPHelpers.GetBytesOfInt(modbusvar.holdingVar);
         //    Debug.Log("bValues convertido -->" + bValues[it]);
         //    it++;
         //}
         //Input values from string to byte[]
-        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].valueVar);
-        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].valueVar);
-        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].valueVar);
-        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[3].valueVar);
-        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[4].valueVar);
-        byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[5].valueVar);
-        byte[] bValue7 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[6].valueVar);
-        byte[] bValue8 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[7].valueVar);
-        byte[] bValue9 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[8].valueVar);
-        byte[] bValue10 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[9].valueVar);
-        byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[10].valueVar);
-        byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[11].valueVar);
-        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[12].valueVar);
+        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);
+        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
+        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].holdingVar);
+        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[3].holdingVar);
+        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[4].holdingVar);
+        byte[] bValue6 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[5].holdingVar);
+        byte[] bValue7 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[6].holdingVar);
+        byte[] bValue8 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[7].holdingVar);
+        byte[] bValue9 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[8].holdingVar);
+        byte[] bValue10 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[9].holdingVar);
+        byte[] bValue11 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[10].holdingVar);
+        byte[] bValue12 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[11].holdingVar);
+        byte[] bValue13 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[12].holdingVar);
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
         byte[] bValue_Input = new byte[26];

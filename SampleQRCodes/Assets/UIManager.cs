@@ -13,17 +13,26 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         //Buscamos el archivo configinfo correspondiente al QR
-        if (configInfo == null)
-            configInfo = FindObjectOfType<ReadFromQR>().configInfo;
-        UpdateTextValue();
+        //if (configInfo == null && FindObjectOfType<ReadFromQR>().configInfo.modbusList.Count == 0)
+        //    configInfo = FindObjectOfType<ReadFromQR>().configInfo;
+        if(configInfo != null)
+            UpdateTextValue();
     }
 
     public void ConvertModbusValues() 
     {
-        frecuencyValue = configInfo.modbusList[5].valueVar + (configInfo.modbusList[6].valueVar / 1000);
-        speedValue = configInfo.modbusList[7].valueVar + (configInfo.modbusList[8].valueVar / 1000);
-        intensityValue = configInfo.modbusList[9].valueVar + (configInfo.modbusList[10].valueVar / 1000);
-        temperatureValue = configInfo.modbusList[11].valueVar + (configInfo.modbusList[12].valueVar / 1000);
+        float dfrecuecyValue = configInfo.modbusList[6].holdingVar;
+        frecuencyValue = configInfo.modbusList[5].holdingVar + (dfrecuecyValue / 1000);
+        //Debug.Log("frecuencyValue = " + frecuencyValue);
+        float dspeedValue = configInfo.modbusList[8].holdingVar;
+        speedValue = configInfo.modbusList[7].holdingVar + (dspeedValue / 1000);
+        //Debug.Log("speedValue = " + speedValue);
+        float dintensityValue = configInfo.modbusList[10].holdingVar;
+        intensityValue = configInfo.modbusList[9].holdingVar + (dintensityValue / 1000);
+        //Debug.Log("intensityValue = " + intensityValue);
+        float dtemperatureValue = configInfo.modbusList[12].holdingVar;
+        temperatureValue = configInfo.modbusList[11].holdingVar + (dtemperatureValue / 1000);
+        //Debug.Log("temperatureValue = " + temperatureValue);
     }
 
 

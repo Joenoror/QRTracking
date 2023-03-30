@@ -832,33 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: config
   configInfo:
-    modbusList:
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
-    - nameVar: 
-      valueVar: 0
+    modbusList: []
   path: 
 --- !u!1 &1453204027080936720
 GameObject:

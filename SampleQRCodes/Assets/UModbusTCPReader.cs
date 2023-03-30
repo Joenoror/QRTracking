@@ -74,7 +74,7 @@ public class UModbusTCPReader : MonoBehaviour
         
         for(int i = 0; i < 13; i++)
         {
-            configInfo.modbusList[i].valueVar = m_iResponseValues[i];
+            configInfo.modbusList[i].holdingVar = m_iResponseValues[i];
         }
        
 
