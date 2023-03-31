@@ -30,11 +30,12 @@ public class UModbusTCPReader : MonoBehaviour
 
     private void Start()
     {
+        InvokeRepeating(nameof(Update_modified), 0f, 1f); //LLama a la función Update_modified cada 1 segundo
         umodbusInstance = GetComponent<UModbusTCPReader>();
     }
 
 
-    private void Update()
+    private void Update_modified()
     {
         if (FindObjectOfType<ReadFromQR>().configInfo != null)
             umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
