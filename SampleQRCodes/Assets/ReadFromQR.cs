@@ -83,6 +83,8 @@ public class ReadFromQR : MonoBehaviour
         string path = fileName + ".json";
         string configInfoJson = File.ReadAllText(path);
         configInfo = JsonUtility.FromJson<ConfigInfo>(configInfoJson);
+        //Actualizo el UIManager para poder escribir bien los datos de la UI
+        FindObjectOfType<UIManager>().configInfo = configInfo;
 
 
 
