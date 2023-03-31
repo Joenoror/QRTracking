@@ -60,5 +60,11 @@ public class UIManager : MonoBehaviour
         Debug.Log("BOTÓN DE MARCHA_2 PRESIONADO");
         //TODO
     }
+    public void ButtonConsignaPressed()
+    {
+        Debug.Log("BOTÓN DE CONSIGNA PRESIONADO");
+        //TODO --> Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
+
+    }
 
 }
