@@ -61,6 +61,11 @@ public class ReadFromQR : MonoBehaviour
     {
         if(path == String.Empty)
             LoadFromQR();
+
+        if (FindObjectOfType<UIManager>().configInfo.modbusList.Count == 0)
+        {
+            FindObjectOfType<UIManager>().configInfo = configInfo;
+        }
     }
 
 
@@ -98,7 +103,6 @@ public class ReadFromQR : MonoBehaviour
         {
             path = gameObject.GetComponent<TextMesh>().text;
             configInfo = JsonUtility.FromJson<ConfigInfo>(path);
-            FindObjectOfType<UIManager>().configInfo = configInfo;
         }
 
 
