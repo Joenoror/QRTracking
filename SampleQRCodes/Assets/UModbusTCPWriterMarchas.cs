@@ -22,23 +22,9 @@ public class UModbusTCPWriterMarchas : MonoBehaviour
         m_oUModbusTCPMarchas = UModbusTCP.Instance;
     }
 
-    //UModbusTCPWriter umodbusInstanceConsigna;
-    UModbusTCPWriterMarchas umodbusInstanceMarchas;
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        umodbusInstanceMarchas = GetComponent<UModbusTCPWriterMarchas>();
-    }
-
-    private void Update()
-    {
-        umodbusInstanceMarchas.WriteMarchasHolding("2", FindObjectOfType<ReadFromQR>().configInfo);
-    }
-
     public List<byte[]> bValues;
 
-    public void WriteMarchasHolding(string address, ConfigInfo configInfo)
+    public void WriteMarchasHolding(string address, List<bool> marchaList)
     {
         //Connection values
         ushort usPort_Input = Convert.ToUInt16("502"); //Variable con el puerto introducido
@@ -48,8 +34,8 @@ public class UModbusTCPWriterMarchas : MonoBehaviour
             m_oUModbusTCPMarchas.Connect(sIP_Input, usPort_Input);
         }
 
-        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
-        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].holdingVar);
+        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(Convert.ToUInt16(marchaList[0]));
+        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(Convert.ToUInt16(marchaList[1]));
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
         byte[] bValue_Input = new byte[4];

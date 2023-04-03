@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
         //    configInfo = FindObjectOfType<ReadFromQR>().configInfo;
         if(configInfo != null)
             UpdateTextValue();
+
     }
 
     public void ConvertModbusValues() 
@@ -45,24 +46,43 @@ public class UIManager : MonoBehaviour
         texts[3].text = temperatureValue.ToString();
     }
 
+    public bool resetValue;
+    [ContextMenu("PressReset")]
     public void ButtonResetPressed()
     {
         Debug.Log("BOTÓN DE RESET PRESIONADO");
+        if(resetValue == true)
+        {
+            FindFirstObjectByType<UModbusTCPWriterReset>().WriteResetHolding("1", resetValue);
+            resetValue = false;
+            FindFirstObjectByType<UModbusTCPWriterReset>().WriteResetHolding("1", resetValue); //PREGUNTAR SI DESDE PLC LO PONEN A 0
+        }
+
         //TODO
     }
+    public List<bool> marchaList;
+    [ContextMenu("PressMarchaIzquierda")]
     public void ButtonMarcha1Pressed()
     {
         Debug.Log("BOTÓN DE MARCHA_1 PRESIONADO");
+        marchaList[0] = true;
+        marchaList[1] = false;
+        FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //1 y 0
         //TODO
     }
+    [ContextMenu("PressMarchaDerecha")]
     public void ButtonMarcha2Pressed()
     {
         Debug.Log("BOTÓN DE MARCHA_2 PRESIONADO");
+        marchaList[0] = false;
+        marchaList[1] = true;
+        FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //0 y 1
         //TODO
     }
     public void ButtonConsignaPressed()
     {
         Debug.Log("BOTÓN DE CONSIGNA PRESIONADO");
+        FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", FindObjectOfType<ReadFromQR>().configInfo);
         //TODO --> Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
 
     }

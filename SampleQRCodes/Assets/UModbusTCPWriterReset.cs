@@ -24,22 +24,22 @@ public class UModbusTCPWriterReset : MonoBehaviour
     }
 
     //UModbusTCPWriter umodbusInstanceConsigna;
-    UModbusTCPWriterReset umodbusInstanceReset;
+    //UModbusTCPWriterReset umodbusInstanceReset;
 
     // Start is called before the first frame update
     private void Start()
     {
-        umodbusInstanceReset = GetComponent<UModbusTCPWriterReset>();
+        //umodbusInstanceReset = GetComponent<UModbusTCPWriterReset>();
     }
 
     private void Update()
     {
-        umodbusInstanceReset.WriteResetHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
+        //umodbusInstanceReset.WriteResetHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
     }
 
     public List<byte[]> bValues;
 
-    public void WriteResetHolding(string address, ConfigInfo configInfo)
+    public void WriteResetHolding(string address, bool resetValue)
     {
         //Connection values
         ushort usPort_Input = Convert.ToUInt16("502"); //Variable con el puerto introducido
@@ -49,7 +49,7 @@ public class UModbusTCPWriterReset : MonoBehaviour
             m_oUModbusTCPReset.Connect(sIP_Input, usPort_Input);
         }
 
-        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);      
+        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(Convert.ToUInt16(resetValue));      
 
         //Exception callback
         if (m_oUModbusTCPExceptionReset != null) //Control de errores

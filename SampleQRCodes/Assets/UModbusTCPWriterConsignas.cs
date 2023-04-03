@@ -28,14 +28,14 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
 
     }
 
-    UModbusTCPWriterConsignas umodbusInstanceConsigna;
+    //UModbusTCPWriterConsignas umodbusInstanceConsigna;
     //UModbusTCPWriterConsignas umodbusInstanceReset;
 
     // Start is called before the first frame update
     private void Start()
     {
         //UmodbusInstance = gameObject.AddComponent<UModbusTCPWriterConsignas>();
-        umodbusInstanceConsigna = GetComponent<UModbusTCPWriterConsignas>();
+        //umodbusInstanceConsigna = GetComponent<UModbusTCPWriterConsignas>();
         //umodbusInstanceReset = GetComponent<UModbusTCPWriterConsignas>();
 
     }
@@ -43,7 +43,7 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
     private void Update()
     {
         //umodbusInstanceReset.WriteResetHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
-        umodbusInstanceConsigna.WriteConsignasHolding("4", FindObjectOfType<ReadFromQR>().configInfo);
+        //umodbusInstanceConsigna.WriteConsignasHolding("4", FindObjectOfType<ReadFromQR>().configInfo);
         
     }
 

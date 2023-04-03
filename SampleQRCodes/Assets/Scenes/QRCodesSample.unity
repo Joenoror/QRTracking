@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 2079062873306329132, guid: 9ceaea61be84db74ca74378863e9c03e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2079062873306329132, guid: 9ceaea61be84db74ca74378863e9c03e,
         type: 3}
@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &871412211
 PrefabInstance:
@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4001612315231318, guid: d3f436728a834c94eb3d882d0dabd410, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4001612315231318, guid: d3f436728a834c94eb3d882d0dabd410, type: 3}
       propertyPath: m_LocalPosition.x
@@ -509,8 +509,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163665700}
-  - component: {fileID: 1163665699}
   - component: {fileID: 1163665701}
+  - component: {fileID: 1163665699}
   - component: {fileID: 1163665702}
   - component: {fileID: 1163665703}
   m_Layer: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163665698}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b0d12ffc2720af4ab044f023c39c21e, type: 3}
   m_Name: 
@@ -545,7 +545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163665701
 MonoBehaviour:
@@ -560,6 +560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sIP_Input: 127.0.0.1
+  initialTime: 0
+  repeatTime: 1
 --- !u!114 &1163665702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163665698}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5328b65cd5926d042bd697e4e7145317, type: 3}
   m_Name: 
@@ -580,7 +582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163665698}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43b4fb547e101c242949f7eb32a5563a, type: 3}
   m_Name: 
@@ -615,7 +617,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1238695791
 PrefabInstance:
@@ -627,7 +629,7 @@ PrefabInstance:
     - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1450481522993836862, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
@@ -717,107 +719,107 @@ PrefabInstance:
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[5].nameVar
-      value: FRECUENCIA_ENTERA
+      value: FRECUENCIA_PENTERA
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[6].nameVar
-      value: FRECUENCIA_DECIMAL
+      value: FRECUENCIA_PDECIMAL
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[7].nameVar
-      value: VELOCIDAD_ENTERA
+      value: VELOCIDAD_PENTERA
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[8].nameVar
-      value: vELOCIDAD_DECIMAL
+      value: VELOCIDAD_PDECIMAL
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[9].nameVar
-      value: INTENSIDAD_ENTERA
+      value: INTENSIDAD_PENTERA
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[10].nameVar
-      value: INTENSIDAD_DECIMAL
+      value: INTENSIDAD_PDECIMAL
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[11].nameVar
-      value: TEMPERATURA_ENTERA
+      value: TEMPERATURA_PENTERA
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[12].nameVar
-      value: TEMPERATURA_DECIMAL
+      value: TEMPERATURA_PDECIMAL
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[0].holdingVar
-      value: 23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[1].holdingVar
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[2].holdingVar
-      value: 83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[3].holdingVar
-      value: 57
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[4].holdingVar
-      value: 99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[5].holdingVar
-      value: 33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[6].holdingVar
-      value: 45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[7].holdingVar
-      value: 83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[8].holdingVar
-      value: 55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[9].holdingVar
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[10].holdingVar
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[11].holdingVar
-      value: 93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[12].holdingVar
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4022096198377538471, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}
@@ -828,6 +830,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490109873518003065, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: resetValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490109873518003065, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: marchaList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490109873518003065, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: marchaList.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490109873518003065, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: marchaList.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ee15513a5e74541b0521ddb3752b07, type: 3}
@@ -934,7 +956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1859008642
 GameObject:
@@ -965,7 +987,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1859008644
 MonoBehaviour:

@@ -28,11 +28,14 @@ public class UModbusTCPReader : MonoBehaviour
 
     UModbusTCPReader umodbusInstance;
 
+    public float initialTime, repeatTime;
+
     private void Start()
     {
-        InvokeRepeating(nameof(Update_modified), 0f, 1f); //LLama a la función Update_modified cada 1 segundo
+        InvokeRepeating(nameof(Update_modified), initialTime, repeatTime); //LLama a la función Update_modified cada 1 segundo
         umodbusInstance = GetComponent<UModbusTCPReader>();
     }
+
 
 
     private void Update_modified()
@@ -41,6 +44,7 @@ public class UModbusTCPReader : MonoBehaviour
             umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
         else
             Debug.LogWarning("ERROR: No se encuentra el configInfo del QR");
+        //yield return new WaitUntil(() => frame >= 10);
     }
 
     public void ReadMultipleHolding(ConfigInfo configInfo)
