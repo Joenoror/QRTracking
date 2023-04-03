@@ -511,6 +511,8 @@ GameObject:
   - component: {fileID: 1163665700}
   - component: {fileID: 1163665699}
   - component: {fileID: 1163665701}
+  - component: {fileID: 1163665702}
+  - component: {fileID: 1163665703}
   m_Layer: 0
   m_Name: ModbusConnection
   m_TagString: Untagged
@@ -525,7 +527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163665698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b0d12ffc2720af4ab044f023c39c21e, type: 3}
   m_Name: 
@@ -555,6 +557,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eafe35241d9edd145b834ac0eb67e7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sIP_Input: 127.0.0.1
+--- !u!114 &1163665702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163665698}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5328b65cd5926d042bd697e4e7145317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sIP_Input: 127.0.0.1
+--- !u!114 &1163665703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163665698}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b4fb547e101c242949f7eb32a5563a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sIP_Input: 127.0.0.1
@@ -725,6 +753,71 @@ PrefabInstance:
         type: 3}
       propertyPath: configInfo.modbusList.Array.data[12].nameVar
       value: TEMPERATURA_DECIMAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[0].holdingVar
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[1].holdingVar
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[2].holdingVar
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[3].holdingVar
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[4].holdingVar
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[5].holdingVar
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[6].holdingVar
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[7].holdingVar
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[8].holdingVar
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[9].holdingVar
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[10].holdingVar
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[11].holdingVar
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454354409708267324, guid: 40ee15513a5e74541b0521ddb3752b07,
+        type: 3}
+      propertyPath: configInfo.modbusList.Array.data[12].holdingVar
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4022096198377538471, guid: 40ee15513a5e74541b0521ddb3752b07,
         type: 3}

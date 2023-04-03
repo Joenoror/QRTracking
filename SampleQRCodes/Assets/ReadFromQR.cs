@@ -94,7 +94,7 @@ public class ReadFromQR : MonoBehaviour
     [ContextMenu("LoadFromQR")]
     public void LoadFromQR()
     {
-        if (gameObject.GetComponent<TextMesh>().text != string.Empty)
+        if (gameObject.GetComponent<TextMesh>().text != string.Empty && configInfo.modbusList.Count == 0)
         {
             path = gameObject.GetComponent<TextMesh>().text;
             configInfo = JsonUtility.FromJson<ConfigInfo>(path);
