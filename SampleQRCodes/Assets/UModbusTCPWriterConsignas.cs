@@ -48,7 +48,7 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
 
     public List<byte[]> bValues;
 
-    public void WriteConsignasHolding(string address, List<int> consignaList)
+    public void WriteConsignasHolding(string address, float valueBar)
     {
         //Connection values
         string sIP_Input = "127.0.0.1"; //Variable con la ip introducida
@@ -59,9 +59,8 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
             m_oUModbusTCP.Connect(sIP_Input, usPort_Input);
         }
 
-        int consignaEntera = Mathf.Clamp(Convert.ToUInt16(consignaList[0]), 0, 999);
-        int consignaDecimal = Mathf.Clamp(Convert.ToUInt16(consignaList[1]), 0, 999);
-
+        int consignaEntera = (int)valueBar;
+        int consignaDecimal = DecimalToInt((double)valueBar);
         //Input values from string to byte[]
         /*byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);
         byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
@@ -92,31 +91,15 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
 
     }
 
-    /*public void WriteResetHolding(string address, ConfigInfo configInfo)
+    int DecimalToInt(double position)
     {
-        //Connection values
-        ushort usPort_Input = Convert.ToUInt16("502"); //Variable con el puerto introducido
-        ushort usAddress_Input = Convert.ToUInt16(Int32.Parse(address) - 1); //Variable con el slot a escribir introducido
-        if (!m_oUModbusTCPReset.connected) //Si no esta conectado, conecta a esa IP y puerto
-        {
-            m_oUModbusTCPReset.Connect(sIP_Input, usPort_Input);
-        }
 
-        byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);      
+        position = Math.Round(position, 5);
+        double result_double = (int)(((decimal)position % 1) * 1000);
+        int result = Math.Abs((int)result_double);
+        return result;
 
-        //Exception callback
-        if (m_oUModbusTCPExceptionReset != null) //Control de errores
-        {
-            m_oUModbusTCPReset.OnException -= m_oUModbusTCPExceptionReset;
-        }
-        m_oUModbusTCPException = new UModbusTCP.ExceptionData(UModbusTCPOnException);
-        m_oUModbusTCPReset.OnException += m_oUModbusTCPExceptionReset;
-
-        //Write multiple inputs (Se escriben desde el registro marcado en adelante)
-        byte[] result = m_oUModbusTCPReset.WriteSingleRegister(2, 1, usAddress_Input, bValue1);
-
-    }*/
-
+    }
 
     void UModbusTCPOnException(ushort _oID, byte _oUnit, byte _oFunction, byte _oException)
     {

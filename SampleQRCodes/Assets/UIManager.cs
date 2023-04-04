@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Microsoft.MixedReality.Toolkit.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -88,7 +89,8 @@ public class UIManager : MonoBehaviour
     {
         //Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
         Debug.Log("BOTÓN DE CONSIGNA PRESIONADO");
-        FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", consignaList);
+        float valueBar = FindObjectOfType<PinchSlider>().SliderValue*50;
+        FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", valueBar);
     }
 
 }
