@@ -147,7 +147,7 @@ RectTransform:
   - {fileID: 2086406502499183930}
   - {fileID: 3968971349228085691}
   m_Father: {fileID: 4635674573916920603}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1115,7 +1115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1447575764968089320}
   - component: {fileID: 1447575764968089236}
-  - component: {fileID: 1447575764968089237}
   - component: {fileID: 1447575764968089322}
   - component: {fileID: 1447575764968089323}
   m_Layer: 0
@@ -1185,14 +1184,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1447575764968089237
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447575764968089321}
-  m_Mesh: {fileID: 0}
 --- !u!222 &1447575764968089322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2473,7 +2464,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1447575765708615044}
   - component: {fileID: 1447575765708615160}
-  - component: {fileID: 1447575765708615161}
   - component: {fileID: 1447575765708615046}
   - component: {fileID: 1447575765708615047}
   m_Layer: 0
@@ -2543,14 +2533,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1447575765708615161
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447575765708615045}
-  m_Mesh: {fileID: 0}
 --- !u!222 &1447575765708615046
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3965,19 +3947,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570292100464711329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7840622055699580965}
   - {fileID: 5846302586812945051}
-  m_Father: {fileID: 4635674573916920603}
-  m_RootOrder: 0
+  m_Father: {fileID: 5247104815712709164}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.0000121593475, y: 0.0000022947788}
+  m_AnchoredPosition: {x: 0, y: -228.01772}
+  m_SizeDelta: {x: -0.0000121593475, y: -152.01181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2064867439490990411
 CanvasRenderer:
@@ -4445,7 +4427,7 @@ RectTransform:
   - {fileID: 6438088003668250566}
   - {fileID: 650839728057446695}
   m_Father: {fileID: 4635674573916920603}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 1, y: 1}
@@ -4732,7 +4714,7 @@ RectTransform:
   - {fileID: 2643929331754928543}
   - {fileID: 8435207231364079653}
   m_Father: {fileID: 4635674573916920603}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -5585,12 +5567,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1160518642272803541}
   - {fileID: 3492741549969170426}
   - {fileID: 7475764536519102709}
   - {fileID: 1085844211368900523}
   m_Father: {fileID: 5247104815712709164}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.6401624}
@@ -7817,6 +7798,7 @@ RectTransform:
   m_Children:
   - {fileID: 5182941158327656791}
   - {fileID: 9010954954998082332}
+  - {fileID: 1160518642272803541}
   - {fileID: 4635674573916920603}
   m_Father: {fileID: 1316592102704257570}
   m_RootOrder: 1
@@ -7887,6 +7869,9 @@ MonoBehaviour:
   speedValue: 0
   intensityValue: 0
   temperatureValue: 0
+  resetValue: 0
+  marchaList: 
+  consignaList: 
 --- !u!1 &8161977856368945117
 GameObject:
   m_ObjectHideFlags: 0
