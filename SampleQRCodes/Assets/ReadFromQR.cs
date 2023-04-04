@@ -15,32 +15,6 @@ public class ModbusVariable{
 public class ConfigInfo
 {
     public List<ModbusVariable> modbusList;
-    //public string nameVar1;
-    //public int holdingVar1;
-    //public string nameVar2;
-    //public int holdingVar2;
-    //public string nameVar3;
-    //public int holdingVar3;
-    //public string nameVar4;
-    //public int holdingVar4;
-    //public string nameVar5;
-    //public int holdingVar5;
-    //public string nameVar6;
-    //public int holdingVar6;
-    //public string nameVar7;
-    //public int holdingVar7;
-    //public string nameVar8;
-    //public int holdingVar8;
-    //public string nameVar9;
-    //public int holdingVar9;
-    //public string nameVar10;
-    //public int holdingVar10;
-    //public string nameVar11;
-    //public int holdingVar11;
-    //public string nameVar12;
-    //public int holdingVar12;
-    //public string nameVar13;
-    //public int holdingVar13;
 }
 
 public class ReadFromQR : MonoBehaviour
@@ -59,10 +33,16 @@ public class ReadFromQR : MonoBehaviour
 
     private void Update()
     {
-        if(path == String.Empty)
-            LoadFromQR();
-
-        if (FindObjectOfType<UIManager>().configInfo.modbusList.Count == 0)
+        //Si el PATH está vacío, es decir, no tenemos información de los nodos del PLC a configurar Y contamos con información del JSON en el QR
+        if(path == String.Empty && gameObject.GetComponent<TextMesh>().text != string.Empty)
+        {
+            LoadFromQR(); //CARGO DESDE EL QR
+        }
+        else
+        {
+            Load(); //CARGO EL ARCHIVO POR DEFECTO PREPARADO
+        }
+        if (FindObjectOfType<UIManager>().configInfo.modbusList.Count == 0 && configInfo.modbusList.Count != 0)
         {
             FindObjectOfType<UIManager>().configInfo = configInfo;
         }
@@ -87,6 +67,7 @@ public class ReadFromQR : MonoBehaviour
     {
         string path = fileName + ".json";
         string configInfoJson = File.ReadAllText(path);
+        gameObject.GetComponent<TextMesh>().text = path;
         configInfo = JsonUtility.FromJson<ConfigInfo>(configInfoJson);
         //Actualizo el UIManager para poder escribir bien los datos de la UI
         FindObjectOfType<UIManager>().configInfo = configInfo;
@@ -103,10 +84,12 @@ public class ReadFromQR : MonoBehaviour
         {
             path = gameObject.GetComponent<TextMesh>().text;
             configInfo = JsonUtility.FromJson<ConfigInfo>(path);
+            FindObjectOfType<UIManager>().configInfo = configInfo;
         }
+        else
+        {
 
-
-
+        }
     }
 
 

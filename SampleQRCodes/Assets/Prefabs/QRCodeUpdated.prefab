@@ -731,9 +731,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450672217791636542}
-  - component: {fileID: 1477004033448073620}
-  - component: {fileID: 1532306239547612158}
   - component: {fileID: 1454354409708267324}
+  - component: {fileID: 1532306239547612158}
+  - component: {fileID: 1477004033448073620}
   m_Layer: 0
   m_Name: QRText
   m_TagString: Untagged
@@ -755,6 +755,44 @@ Transform:
   m_Father: {fileID: 1458617180749055644}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &1454354409708267324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453190405964673088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c4accaa1c7fc34b9bbe4292404c671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: config
+  configInfo:
+    modbusList: []
+  path: 
+--- !u!102 &1532306239547612158
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453190405964673088}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!23 &1477004033448073620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -796,44 +834,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!102 &1532306239547612158
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453190405964673088}
-  m_Text: 
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
---- !u!114 &1454354409708267324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453190405964673088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c4accaa1c7fc34b9bbe4292404c671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: config
-  configInfo:
-    modbusList: []
-  path: 
 --- !u!1 &1453204027080936720
 GameObject:
   m_ObjectHideFlags: 0
