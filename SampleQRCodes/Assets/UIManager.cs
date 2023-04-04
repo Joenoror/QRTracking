@@ -89,7 +89,9 @@ public class UIManager : MonoBehaviour
     {
         //Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
         Debug.Log("BOTÓN DE CONSIGNA PRESIONADO");
+        Debug.Log("inicial: " + FindObjectOfType<PinchSlider>().SliderValue);
         float valueBar = FindObjectOfType<PinchSlider>().SliderValue*50;
+        Debug.Log("modificado: " + valueBar);
         FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", valueBar);
     }
 

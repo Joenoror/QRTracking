@@ -60,7 +60,9 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
         }
 
         int consignaEntera = (int)valueBar;
+        Debug.Log("parte entera:" + consignaEntera);
         int consignaDecimal = DecimalToInt((double)valueBar);
+        Debug.Log("parte decimal:" + consignaDecimal);
         //Input values from string to byte[]
         /*byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);
         byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
