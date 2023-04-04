@@ -7,8 +7,6 @@ using System;
 public class UModbusTCPWriterReset : MonoBehaviour
 {
 
-    public string sIP_Input = "127.0.0.1";
-
     /////Private var///// 
     /*UModbusTCP m_oUModbusTCP;
     UModbusTCP.ExceptionData m_oUModbusTCPException;*/
@@ -42,6 +40,7 @@ public class UModbusTCPWriterReset : MonoBehaviour
     public void WriteResetHolding(string address, bool resetValue)
     {
         //Connection values
+        string sIP_Input = "10.103.125.10"; //Variable con la ip introducida
         ushort usPort_Input = Convert.ToUInt16("502"); //Variable con el puerto introducido
         ushort usAddress_Input = Convert.ToUInt16(Int32.Parse(address) - 1); //Variable con el slot a escribir introducido
         if (!m_oUModbusTCPReset.connected) //Si no esta conectado, conecta a esa IP y puerto

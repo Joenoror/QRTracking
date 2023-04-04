@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public bool resetValue;
     [ContextMenu("PressReset")]
-    public void ButtonResetPressed()
+    public void ButtonResetPressed() //TRANSFORMARLO EN UN PULSADOR
     {
         Debug.Log("BOTÓN DE RESET PRESIONADO");
         if(resetValue == true)
@@ -77,7 +77,10 @@ public class UIManager : MonoBehaviour
         marchaList[0] = false;
         marchaList[1] = true;
         FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //0 y 1
-        //TODO
+                                                                                               //TODO
+
+        //HACER UN BOTÓN PARO QUE PONGA MARCHA 1 y MARCHA 2 a 0 y luego un RESET a 1
+
     }
     public void ButtonConsignaPressed()
     {
