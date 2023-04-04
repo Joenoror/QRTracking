@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public bool resetValue;
     [ContextMenu("PressReset")]
-    public void ButtonResetPressed() //TRANSFORMARLO EN UN PULSADOR
+    public void ButtonResetPressed() 
     {
         Debug.Log("BOTÓN DE RESET PRESIONADO");
         if(resetValue == true)
@@ -58,9 +58,10 @@ public class UIManager : MonoBehaviour
             FindFirstObjectByType<UModbusTCPWriterReset>().WriteResetHolding("1", resetValue); //PREGUNTAR SI DESDE PLC LO PONEN A 0
         }
 
-        //TODO
+       
     }
     public List<bool> marchaList;
+    public List<int> consignaList;
     [ContextMenu("PressMarchaIzquierda")]
     public void ButtonMarcha1Pressed()
     {
@@ -68,7 +69,7 @@ public class UIManager : MonoBehaviour
         marchaList[0] = true;
         marchaList[1] = false;
         FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //1 y 0
-        //TODO
+        
     }
     [ContextMenu("PressMarchaDerecha")]
     public void ButtonMarcha2Pressed()
@@ -77,17 +78,17 @@ public class UIManager : MonoBehaviour
         marchaList[0] = false;
         marchaList[1] = true;
         FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //0 y 1
-                                                                                               //TODO
+                                                                                               
 
         //HACER UN BOTÓN PARO QUE PONGA MARCHA 1 y MARCHA 2 a 0 y luego un RESET a 1
 
     }
+    [ContextMenu("PressConsigna")]
     public void ButtonConsignaPressed()
     {
+        //Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
         Debug.Log("BOTÓN DE CONSIGNA PRESIONADO");
-        FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", FindObjectOfType<ReadFromQR>().configInfo);
-        //TODO --> Función de escribir la consigna, posteriormente habría que leer la frecuencia. En el caso de que esto se lea constantemente no hay problema
-
+        FindFirstObjectByType<UModbusTCPWriterConsignas>().WriteConsignasHolding("4", consignaList);
     }
 
 }

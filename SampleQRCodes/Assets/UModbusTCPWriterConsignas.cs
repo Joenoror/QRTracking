@@ -48,7 +48,7 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
 
     public List<byte[]> bValues;
 
-    public void WriteConsignasHolding(string address, ConfigInfo configInfo)
+    public void WriteConsignasHolding(string address, List<int> consignaList)
     {
         //Connection values
         string sIP_Input = "127.0.0.1"; //Variable con la ip introducida
@@ -59,12 +59,15 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
             m_oUModbusTCP.Connect(sIP_Input, usPort_Input);
         }
 
+        int consignaEntera = Mathf.Clamp(Convert.ToUInt16(consignaList[0]), 0, 999);
+        int consignaDecimal = Mathf.Clamp(Convert.ToUInt16(consignaList[1]), 0, 999);
+
         //Input values from string to byte[]
         /*byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);
         byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
         byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].holdingVar);*/
-        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[3].holdingVar);
-        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[4].holdingVar);
+        byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(consignaEntera);
+        byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(consignaDecimal);
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
         byte[] bValue_Input = new byte[4];
