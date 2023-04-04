@@ -39,11 +39,16 @@ public class UModbusTCPReader : MonoBehaviour
 
     private void Update_modified()
     {
-        if (FindObjectOfType<ReadFromQR>().configInfo != null)
-            umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
+        if (FindObjectOfType<ReadFromQR>()) //SI SE HA CARGADO EL QR
+        {
+            if (FindObjectOfType<ReadFromQR>().configInfo != null)
+                umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
+            else
+                Debug.LogWarning("ERROR: No se encuentra el configInfo del QR");
+        }
         else
-            Debug.LogWarning("ERROR: No se encuentra el configInfo del QR");
-        //yield return new WaitUntil(() => frame >= 10);
+            Debug.Log("ERROR: NO SE HA CARGADO AÚN EL QR");
+
     }
 
     public void ReadMultipleHolding(ConfigInfo configInfo)
