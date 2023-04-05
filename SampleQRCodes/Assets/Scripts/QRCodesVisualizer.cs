@@ -145,21 +145,21 @@ namespace QRTracking
             
         }
 
-        void OnApplicationQuit()
-        {
-            Debug.Log("Application ending after " + Time.time + " seconds");
+        //void OnApplicationQuit()
+        //{
+        //    Debug.Log("Application ending after " + Time.time + " seconds");
 
-            //Clears all of the caches
-            Caching.AddCache("qrCodesObjectsList");
+        //    //Clears all of the caches
+        //    Caching.AddCache("qrCodesObjectsList");
 
-            bool success = Caching.ClearCache();
+        //    bool success = Caching.ClearCache();
 
-            if (!success)
-            {
-                Debug.Log("Unable to clear cache");
-            }
+        //    if (!success)
+        //    {
+        //        Debug.Log("Unable to clear cache");
+        //    }
 
-        }
+        //}
     }
 
 }

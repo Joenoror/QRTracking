@@ -34,7 +34,7 @@ public class ReadFromQR : MonoBehaviour
     private void Update()
     {
         //Si el PATH está vacío, es decir, no tenemos información de los nodos del PLC a configurar Y contamos con información del JSON en el QR
-        if(path == String.Empty && gameObject.GetComponent<TextMesh>().text != string.Empty)
+        if(path == String.Empty && GameObject.Find("QRText").GetComponent<TextMesh>().text != string.Empty)
         {
             LoadFromQR(); //CARGO DESDE EL QR
         }
@@ -81,9 +81,10 @@ public class ReadFromQR : MonoBehaviour
     [ContextMenu("LoadFromQR")]
     public void LoadFromQR()
     {
-        if (gameObject.GetComponent<TextMesh>().text != string.Empty)
+        if (GameObject.Find("QRText").GetComponent<TextMesh>().text != string.Empty)
         {
-            path = gameObject.GetComponent<TextMesh>().text;
+            path = GameObject.Find("QRText").GetComponent<TextMesh>().text;
+            //path = gameObject.GetComponent<TextMesh>().text;
             configInfo = JsonUtility.FromJson<ConfigInfo>(path);
             FindObjectOfType<UIManager>().configInfo = configInfo;
         }

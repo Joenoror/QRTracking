@@ -34,12 +34,13 @@ namespace QRTracking
             InitializeSpatialGraphNode();
         }
 
+        private bool located;
+
         // Update is called once per frame
         void Update()
         {
             InitializeSpatialGraphNode();
-
-            if (node != null)
+            if (node != null && !located)
             {
                 if (node.TryLocate(FrameTime.OnUpdate, out Pose pose))
                 {
@@ -52,6 +53,7 @@ namespace QRTracking
 
                     gameObject.transform.SetPositionAndRotation(pose.position, pose.rotation);
                     Debug.Log("Id= " + Id + " QRPose = " + pose.position.ToString("F7") + " QRRot = " + pose.rotation.ToString("F7"));
+                    located = true;
                 }
                 else
                 {
