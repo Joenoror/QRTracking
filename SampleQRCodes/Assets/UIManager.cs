@@ -52,14 +52,19 @@ public class UIManager : MonoBehaviour
     public void ButtonResetPressed() 
     {
         Debug.Log("BOTÓN DE RESET PRESIONADO");
-        if(resetValue == true)
+
+        if (!resetValue)
         {
+            resetValue = true;
             FindFirstObjectByType<UModbusTCPWriterReset>().WriteResetHolding("1", resetValue);
+        }
+        else
+        {
             resetValue = false;
             FindFirstObjectByType<UModbusTCPWriterReset>().WriteResetHolding("1", resetValue); //PREGUNTAR SI DESDE PLC LO PONEN A 0
         }
 
-       
+
     }
     public List<bool> marchaList;
     public List<int> consignaList;

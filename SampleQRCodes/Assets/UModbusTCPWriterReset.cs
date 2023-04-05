@@ -21,20 +21,6 @@ public class UModbusTCPWriterReset : MonoBehaviour
         m_oUModbusTCPReset = UModbusTCP.Instance;
     }
 
-    //UModbusTCPWriter umodbusInstanceConsigna;
-    //UModbusTCPWriterReset umodbusInstanceReset;
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        //umodbusInstanceReset = GetComponent<UModbusTCPWriterReset>();
-    }
-
-    private void Update()
-    {
-        //umodbusInstanceReset.WriteResetHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
-    }
-
     public List<byte[]> bValues;
 
     public void WriteResetHolding(string address, bool resetValue)

@@ -42,7 +42,11 @@ public class UModbusTCPReader : MonoBehaviour
         if (FindObjectOfType<ReadFromQR>()) //SI SE HA CARGADO EL QR
         {
             if (FindObjectOfType<ReadFromQR>().configInfo != null)
+            {
+                Debug.Log("Entro aquí y hago la llamada a la siguiente funcíón");
                 umodbusInstance.ReadMultipleHolding(FindObjectOfType<ReadFromQR>().configInfo);
+            }
+
             else
                 Debug.LogWarning("ERROR: No se encuentra el configInfo del QR");
         }

@@ -38,9 +38,10 @@ public class ReadFromQR : MonoBehaviour
         {
             LoadFromQR(); //CARGO DESDE EL QR
         }
-        else
+        else if(configInfo.modbusList.Count == 0)
+                Load(); //CARGO EL ARCHIVO POR DEFECTO PREPARADO)
         {
-            Load(); //CARGO EL ARCHIVO POR DEFECTO PREPARADO
+            
         }
         if (FindObjectOfType<UIManager>().configInfo.modbusList.Count == 0 && configInfo.modbusList.Count != 0)
         {
@@ -67,7 +68,7 @@ public class ReadFromQR : MonoBehaviour
     {
         string path = fileName + ".json";
         string configInfoJson = File.ReadAllText(path);
-        gameObject.GetComponent<TextMesh>().text = path;
+        //gameObject.GetComponent<TextMesh>().text = path;
         configInfo = JsonUtility.FromJson<ConfigInfo>(configInfoJson);
         //Actualizo el UIManager para poder escribir bien los datos de la UI
         FindObjectOfType<UIManager>().configInfo = configInfo;

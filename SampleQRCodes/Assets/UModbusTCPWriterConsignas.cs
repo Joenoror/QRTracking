@@ -21,30 +21,8 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
         m_oUModbusTCPException = null;
         m_oUModbusTCP = UModbusTCP.Instance;
 
-        /*m_oUModbusTCPReset = null;
-        m_oUModbusTCPExceptionReset = null;
-        m_oUModbusTCPReset = UModbusTCP.Instance;*/
-
     }
 
-    //UModbusTCPWriterConsignas umodbusInstanceConsigna;
-    //UModbusTCPWriterConsignas umodbusInstanceReset;
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        //UmodbusInstance = gameObject.AddComponent<UModbusTCPWriterConsignas>();
-        //umodbusInstanceConsigna = GetComponent<UModbusTCPWriterConsignas>();
-        //umodbusInstanceReset = GetComponent<UModbusTCPWriterConsignas>();
-
-    }
-
-    private void Update()
-    {
-        //umodbusInstanceReset.WriteResetHolding("1", FindObjectOfType<ReadFromQR>().configInfo);
-        //umodbusInstanceConsigna.WriteConsignasHolding("4", FindObjectOfType<ReadFromQR>().configInfo);
-        
-    }
 
     public List<byte[]> bValues;
 
@@ -63,19 +41,13 @@ public class UModbusTCPWriterConsignas : MonoBehaviour
         Debug.Log("parte entera:" + consignaEntera);
         int consignaDecimal = DecimalToInt((double)valueBar);
         Debug.Log("parte decimal:" + consignaDecimal);
-        //Input values from string to byte[]
-        /*byte[] bValue1 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[0].holdingVar);
-        byte[] bValue2 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[1].holdingVar);
-        byte[] bValue3 = UModbusTCPHelpers.GetBytesOfInt(configInfo.modbusList[2].holdingVar);*/
+
         byte[] bValue4 = UModbusTCPHelpers.GetBytesOfInt(consignaEntera);
         byte[] bValue5 = UModbusTCPHelpers.GetBytesOfInt(consignaDecimal);
 
         //Cada int se guarda en dos posiciones consecutivas del array de tipo byte
         byte[] bValue_Input = new byte[4];
 
-        /*bValue1.CopyTo(bValue_Input, 0);
-        bValue2.CopyTo(bValue_Input, 2);
-        bValue3.CopyTo(bValue_Input, 4);*/
         bValue4.CopyTo(bValue_Input, 0);
         bValue5.CopyTo(bValue_Input, 2);
         
