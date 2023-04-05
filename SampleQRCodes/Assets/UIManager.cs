@@ -84,11 +84,20 @@ public class UIManager : MonoBehaviour
         marchaList[0] = false;
         marchaList[1] = true;
         FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //0 y 1
-                                                                                               
-
-        //HACER UN BOTÓN PARO QUE PONGA MARCHA 1 y MARCHA 2 a 0 y luego un RESET a 1
+                                                                                            
 
     }
+
+    [ContextMenu("PressSTOP")]
+    public void ButtonSTOPPressed()
+    {
+        Debug.Log("BOTÓN DE STOP PRESIONADO");
+        marchaList[0] = false;
+        marchaList[1] = false;
+        FindFirstObjectByType<UModbusTCPWriterMarchas>().WriteMarchasHolding("2", marchaList); //0 y 0
+
+    }
+
     [ContextMenu("PressConsigna")]
     public void ButtonConsignaPressed()
     {
