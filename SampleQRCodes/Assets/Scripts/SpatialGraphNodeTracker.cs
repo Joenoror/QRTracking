@@ -34,13 +34,15 @@ namespace QRTracking
             InitializeSpatialGraphNode();
         }
 
-        private bool located;
+        //private bool located;
 
         // Update is called once per frame
         void Update()
         {
             InitializeSpatialGraphNode();
-            if (node != null && !located)
+            if (node != null
+                //&& !located
+                )
             {
                 if (node.TryLocate(FrameTime.OnUpdate, out Pose pose))
                 {
@@ -53,11 +55,19 @@ namespace QRTracking
 
                     gameObject.transform.SetPositionAndRotation(pose.position, pose.rotation);
                     Debug.Log("Id= " + Id + " QRPose = " + pose.position.ToString("F7") + " QRRot = " + pose.rotation.ToString("F7"));
-                    located = true;
+                    //located = true;
                 }
                 else
                 {
                     Debug.LogWarning("Cannot locate " + Id);
+                    //var DeleteGameObject = FindObjectsOfType<QRCode>();
+                    //foreach(var deleteObject in DeleteGameObject)
+                    //{
+                    //    if(deleteObject.QRID.text == Id.ToString())
+                    //    {
+                    //        Debug.Log("QR Repetido encontrado");
+                    //    }
+                    //}
                 }
             }
         }

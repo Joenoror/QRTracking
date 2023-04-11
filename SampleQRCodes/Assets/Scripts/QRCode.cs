@@ -14,7 +14,7 @@ namespace QRTracking
         public float PhysicalSize { get; private set; }
         public string CodeText { get; private set; }
 
-        private TextMesh QRID;
+        public  TextMesh QRID;
         private TextMesh QRNodeID;
         private TextMesh QRText;
         private TextMesh QRVersion;
@@ -48,7 +48,7 @@ namespace QRTracking
             QRTimeStamp = QRInfo.transform.Find("QRTimeStamp").gameObject.GetComponent<TextMesh>();
             QRSize = QRInfo.transform.Find("QRSize").gameObject.GetComponent<TextMesh>();
 
-            QRID.text = "Id:" + qrCode.Id.ToString();
+            QRID.text = qrCode.Id.ToString();
             QRNodeID.text = "NodeId:" + qrCode.SpatialGraphNodeId.ToString();
             QRText.text = CodeText;
 

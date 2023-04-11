@@ -502,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c492e1548614544e9827a3d20f5c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QRID: {fileID: 0}
 --- !u!114 &6599202089697823878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,9 +607,10 @@ GameObject:
   - component: {fileID: 1458610931984708752}
   - component: {fileID: 1476584807118212704}
   - component: {fileID: 1532393444144177970}
+  - component: {fileID: 5638125998136509860}
   m_Layer: 0
   m_Name: QRTimeStamp
-  m_TagString: Untagged
+  m_TagString: TimeStamp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,6 +692,20 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &5638125998136509860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453169371140882512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a4c076b17d35f4bb4d6012f130d0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qrID: {fileID: 7231301139962557772}
+  gameObject: {fileID: 1453153784257171974}
 --- !u!1 &1453174560055096438
 GameObject:
   m_ObjectHideFlags: 0
