@@ -168,6 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: config
   configInfo:
+    ipValue: 0
+    portValue: 0
     modbusList: []
   path: 
 --- !u!1 &648092693
@@ -188,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &648092694
 Transform:
   m_ObjectHideFlags: 0
