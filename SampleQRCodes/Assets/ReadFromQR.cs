@@ -14,6 +14,8 @@ public class ModbusVariable{
 [Serializable]
 public class ConfigInfo
 {
+    public int ipValue;
+    public int portValue;
     public List<ModbusVariable> modbusList;
 }
 
