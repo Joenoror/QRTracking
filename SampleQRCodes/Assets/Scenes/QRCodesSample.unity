@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &648092694
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,4 +1120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qrList: []
   prefab: {fileID: 3380335567030811386, guid: 28b3a0b0ad763854d837611b98829a59, type: 3}
+  maxValue: 0
   futuredeletedQRs: []

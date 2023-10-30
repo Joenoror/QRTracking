@@ -31,6 +31,7 @@ public class CreatePlane : MonoBehaviour
                 Instantiate(prefab, item.transform);
             }
 
+            /*
             Debug.Log("TimeStamp = " + item.GetComponent<TextMesh>().text);
             string[] timeTimeStamp = item.GetComponent<TextMesh>().text.Split();
 
@@ -81,7 +82,7 @@ public class CreatePlane : MonoBehaviour
                 }
 
             }
-
+*/
         }
 
 
